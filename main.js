@@ -5,6 +5,17 @@ const usb = require('usb');
 
 let windows = []
 
+var Ant = require('ant-plus');
+var stick = new Ant.GarminStick2;
+var sensor = new Ant.HeartRateSensor(stick);
+sensor.on('hbData', function (data) {
+    console.log(data.DeviceID, data.ComputedHeartRate);
+});
+ 
+stick.on('startup', function () {
+    sensor.attach(0, 0);
+});
+
 const showDevices = () => {
     const devices = usb.getDeviceList()
     const text = devices.map(d => `pid: ${d.deviceDescriptor.idProduct}, vid: ${d.deviceDescriptor.idVendor}`).join('\n')
@@ -30,7 +41,10 @@ function createWindow() {
     // win.webContents.openDevTools()
 
     windows.push(win);
-    showDevices()
+    showDevices();
+    if (!stick.open()) {
+        console.log('Stick not found!');
+    }
 }
 
 // This method will be called when Electron has finished

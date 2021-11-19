@@ -35,6 +35,13 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.17.33.tgz#011ee28e38dc7aee1be032ceadf6332a0ab15b12"
   integrity sha512-noEeJ06zbn3lOh4gqe2v7NMGS33jrulfNqYFDjjEbhpDEHR5VTxgYNQSBqBlJIsBJW3uEYDgD6kvMnrrhGzq8g==
 
+ant-plus@^0.1.24:
+  version "0.1.24"
+  resolved "https://registry.yarnpkg.com/ant-plus/-/ant-plus-0.1.24.tgz#d120f208e78fcd1628b0cf452999eff0a07033c8"
+  integrity sha512-otEIAN+9jtu/1mwHL81au0sO7muJT1QrWOm9j29NEg3x1Y+ZsSIYX+LSdY+BBr2mLA4hT/vpqv5pWX9KDWceVg==
+  dependencies:
+    usb "^1.6.0"
+
 boolean@^3.0.1:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/boolean/-/boolean-3.1.4.tgz#f51a2fb5838a99e06f9b6ec1edb674de67026435"
@@ -557,6 +564,14 @@ usb@1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/usb/-/usb-1.9.0.tgz#641a1554e1817f5c53606c04bb1cbd3c755a358b"
   integrity sha512-nybH1SzvwYkRQ5s8ko9XXyZkrcWV5VWMMv7yh5H++wALhjBFjt2XBoSJWxBUdu6U/UfceQz42inhv3/maxM8jg==
+  dependencies:
+    node-addon-api "^4.2.0"
+    node-gyp-build "^4.3.0"
+
+usb@^1.6.0:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/usb/-/usb-1.9.1.tgz#092a12455c8c21e4f0b7f4b3b0d37436f32f0ef7"
+  integrity sha512-T6DZbJAFNcxhY1FzaYdXhV2oqoRlvLhtSSmnbFAqyCxahUkc+g0BPZVXv7hIeQQxDCAQnr4Ia8bfOk1JlzNzzw==
   dependencies:
     node-addon-api "^4.2.0"
     node-gyp-build "^4.3.0"
